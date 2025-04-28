@@ -30,7 +30,7 @@ jobs:
       - name: Run fetch script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/fetch_github_top.py
+        run: python scripts/fetch_github_main.py
 
       - name: Commit and push data
         run: |
@@ -42,7 +42,7 @@ jobs:
           
       - name: Update README badge URL
         run: |
-          sed -i "s|stephen-a2z/workspace/codeLegend|${{ github.repository }}|g" README.md
+          sed -i "s|Mohistack-a2z/workspace/CodeLegend|${{ github.repository }}|g" README.md
           git add README.md
           git commit -m "Update README badge URL [skip ci]" || echo "No changes to commit"
           git push
