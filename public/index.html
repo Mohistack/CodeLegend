@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">GitHub 封神榜 / GitHub Legend Leaderboard
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1 data-i18n="mainTitle">GitHub 封榜单 / GitHub CodeLegend Leaderboard</h1>
+        <div class="controls">
+            <div class="language-switch">
+                <span data-i18n="langLabel">语言: / Language:</span>
+                <a href="#" class="lang-select active" data-lang="zh">中文</a>
+                <a href="#" class="lang-select" data-lang="en">English</a>
+            </div>
+            <div class="update-time" id="update-time" data-i18n="update-time" data-i18n-update>最近更新时间：加载中... / Last updated: Loading...</div>
+            <div class="github-user-count" id="github-user-count" data-i18n="githubUserCount" data-i18n-github-user-count>GitHub 当前注册用户总数：加载中... / GitHub Registered Users: Loading...</div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="rank-nav">
+            <button data-type="daily_trending" class="active" data-i18n="daily_trending">今日热门 / Daily Trending</button>
+            <button data-type="weekly_trending" data-i18n="weekly_trending">本周热门 / Weekly Trending</button>
+            <button data-type="monthly_trending" data-i18n="monthly_trending">本月热门 / Monthly Trending</button>
+            <button data-type="top_repos_list" data-i18n="top_repos_list">总星榜 / Top Repos</button>
+            <button data-type="top_users_list" data-i18n="top_users_list">用户榜 / Top Users</button>
+        </nav>
+
+        <div class="list-controls">
+             <label for="items-per-page" data-i18n="itemsPerPage">每页显示: / Items per page:</label>
+             <select id="items-per-page">
+                 <option value="25">25</option>
+                 <option value="50">50</option>
+                 <option value="100" selected >100</option>
+                 <option value="250">250</option>
+                 <option value="500">500</option>
+                 <option value="1000">1000</option>
+             </select>
+        </div>
+
+        <div id="rank-list-container">
+            <!-- 排名列表将在此处动态生成 -->
+            <p data-i18n="loading">正在加载数据... / Loading data...</p>
+        </div>
+
+        <div class="pagination" id="pagination-container">
+            <!-- 分页控件将在此处动态生成 -->
+        </div>
+    </main>
+
+    <footer>
+        <p><span data-i18n="dataSource">数据来源: GitHub API / Data Source: GitHub API</span> | <a href="https://github.com/stephen-a2z/CodeLegend" target="_blank" data-i18n="projectSource">项目源码 / Project Source</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

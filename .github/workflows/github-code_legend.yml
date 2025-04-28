@@ -1,0 +1,48 @@
+name: Update GitHub Code Legend LeaderBoards
+author: stephen-a2z
+description: Update GitHub Code Legend LeaderBoards
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # 每天UTC时间2点自动运行（可根据需要调整）
+  workflow_dispatch:     # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      - name: Set up SQLite
+        uses: ryohidaka/action-setup-sqlite@v1.2
+        with:
+          version: "3.43.2"
+
+      - name: Run fetch script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_github_top.py
+
+      - name: Commit and push data
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git commit -m "Update GitHub top data [skip ci]" || echo "No changes to commit"
+          git push
+          
+      - name: Update README badge URL
+        run: |
+          sed -i "s|stephen-a2z/workspace/codeLegend|${{ github.repository }}|g" README.md
+          git add README.md
+          git commit -m "Update README badge URL [skip ci]" || echo "No changes to commit"
+          git push
