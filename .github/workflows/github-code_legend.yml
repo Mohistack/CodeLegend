@@ -1,6 +1,4 @@
 name: Update GitHub Code Legend LeaderBoards
-author: stephen-a2z
-description: Update GitHub Code Legend LeaderBoards
 
 on:
   schedule:
