@@ -2,7 +2,7 @@ name: Update GitHub Code Legend LeaderBoards
 
 on:
   schedule:
-    - cron: '0 1 * * *' # 每天UTC时间2点自动运行（可根据需要调整）
+    - cron: '0 0 * * *' # 每天UTC时间0点自动运行（可根据需要调整）
   workflow_dispatch:     # 允许手动触发
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
         
       - name: Set up SQLite
-        uses: ryohidaka/action-setup-sqlite@v1.2
+        uses: ryohidaka/action-setup-sqlite@v1.2.0
         with:
           version: "3.43.2"
 
