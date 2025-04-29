@@ -35,14 +35,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: python scripts/fetch_github_main.py
 
-      - name: Update README badge URL # Keep this step if still needed
-        run: |
-          sed -i "s|Mohistack/workspace/CodeLegend|${{ github.repository }}|g" README.md
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update README badge URL [skip ci]" || echo "No changes to commit"
-          git push
+      # - name: Update README badge URL # Keep this step if still needed
+      #   run: |
+      #     sed -i "s|Mohistack/workspace/CodeLegend|${{ github.repository }}|g" README.md
+      #     git config --global user.name "github-actions[bot]"
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git add README.md
+      #     git commit -m "Update README badge URL [skip ci]" || echo "No changes to commit"
+      #     git push
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
