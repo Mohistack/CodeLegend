@@ -363,10 +363,13 @@ def fetch_all_repos_by_graphql(max_number_of_repos: int = 200,
     )
     return all_repos_data
 
-def _process_repo_data(repos_data_fetched):
+def _process_repo_data(repos_data_fetched: List[Dict]):
     """Processes raw repository data fetched from GraphQL API."""
     processed_repos = []
     for repo_data in repos_data_fetched:
+        if not node:
+            logger.warning(f"Skipping repo data due to missing 'node': {repo_data}")
+            continue
         node = repo_data.get('node', {})
         if not node: # Skip if node is missing or empty
             logger.warning(f"Skipping repo data due to missing 'node': {repo_data}")
