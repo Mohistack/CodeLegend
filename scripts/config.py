@@ -32,7 +32,7 @@ SQLITE_DB_PATHS = [
 ]
 DB_DIR = SQLITE_DB_DIR
 # --- GitHub API ---
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_TOKEN = os.getenv("GH_TOKEN")
 
 # Ensure GITHUB_TOKEN is loaded
 if not GITHUB_TOKEN:
