@@ -286,7 +286,11 @@ def fetch_top_repos_by_graphql(number_of_repos: int = 10,
         logger.warning("Too many requests, sleeping for 10 seconds")
         time.sleep(10)
         return fetch_top_repos_by_graphql(number_of_repos, cursor)
-    if response.status_code != 200:
+    elif response.status_code == 403:
+        logger.exception(f"Error fetching top repos: [{response.status_code}]")
+        logger.info(response.text) # Keep logging response text for context
+        return None
+    elif response.status_code != 200:
         # Use logger.error instead of logger.exception for non-200 status codes
         logger.error(f"Error fetching top repos: [{response.status_code}]")
         logger.info(response.text) # Keep logging response text for context
@@ -315,6 +319,9 @@ def fetch_all_repos_by_graphql(max_number_of_repos: int = 200,
     while ((max_number_of_repos == -1) or (all_number_of_repos_fetched < max_number_of_repos)):
         repos_data_info = fetch_top_repos_by_graphql(number_of_repos_one_time,
                                                      cursor)
+        if not repos_data_info:
+            logger.warning("No repos data fetched in this iteration, stopping pagination.")
+            break # Exit loop if no more data
         try:
             repos_data_fetched = repos_data_info["data"]["search"]['edges']
         except Exception as e:
