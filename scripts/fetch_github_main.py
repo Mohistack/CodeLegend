@@ -2,7 +2,8 @@ import datetime
 from functools import wraps
 import os
 import time
-from typing import Optional
+from typing import Optional, List, Dict
+
 
 # Import configuration
 import config
@@ -18,7 +19,7 @@ from utils.db_utils import (batch_update_accumulated_stars, get_repos_hot,
                             get_repos_hot_order_by_range_day,
                             get_top_followergazer_count_users,
                             get_total_count_by_datetime, save_repositories,
-                            save_users, update_total_count)
+                            save_users, update_total_count, init_db)
 
 # --- Constants ---
 # Define a constant for the datetime format string
@@ -224,9 +225,11 @@ def fetch_all_users_by_graphql(max_number_of_users,
                    users_data_fetched_adjusted_list)
 
     # Update total counts including fetched counts after the loop finishes
-    update_total_count(config.GITHUB_DB_INFO_PATH,
-                       user_total_count=users_total_count,
-                       fetched_users_count=all_number_of_users_fetched)
+    update_total_count(db_path=config.GITHUB_DB_INFO_PATH,
+                       user_total_count=users_total_count, 
+                       fetched_users_count=all_number_of_users_fetched,
+                       repo_total_count=0,
+                       fetched_repos_count=0)
 
     # save all_users_data to json file
     save_json(all_users_data,
@@ -308,8 +311,8 @@ def fetch_all_repos_by_graphql(max_number_of_repos: int = 200,
         "top_repos": []
     }
     if max_number_of_repos == -1:
-        logger.info("Fetching all repos from GitHub")
-    while (max_number_of_repos == -1 or (all_number_of_repos_fetched < max_number_of_repos)):
+        logger.info("No limit, fetching all repos from GitHub")
+    while ((max_number_of_repos == -1) or (all_number_of_repos_fetched < max_number_of_repos)):
         repos_data_info = fetch_top_repos_by_graphql(number_of_repos_one_time,
                                                      cursor)
         try:
@@ -321,9 +324,12 @@ def fetch_all_repos_by_graphql(max_number_of_repos: int = 200,
         # Check if data was fetched before accessing cursor
         if not repos_data_fetched:
             logger.warning("No repo data fetched in this iteration, stopping pagination.")
+            logger.info(f"cursors:{last_cursor} | current repos data info: {repos_data_info}")
             break # Exit loop if no more data
         # update the cursor
         cursor = repos_data_fetched[-1]["cursor"]
+        ## debug
+        last_cursor =cursor
         number_of_repos_fetched = len(repos_data_fetched)
         all_number_of_repos_fetched += number_of_repos_fetched
         # the total count of github users
@@ -350,7 +356,7 @@ def fetch_all_repos_by_graphql(max_number_of_repos: int = 200,
                           repos_data_fetched_adjusted_list)
 
     # Update total counts including fetched counts after the loop finishes
-    update_total_count(config.GITHUB_DB_INFO_PATH,
+    update_total_count(db_path=config.GITHUB_DB_INFO_PATH,
                        repo_total_count=repos_total_count,
                        fetched_repos_count=all_number_of_repos_fetched)
 
@@ -367,7 +373,7 @@ def _process_repo_data(repos_data_fetched: List[Dict]):
     """Processes raw repository data fetched from GraphQL API."""
     processed_repos = []
     for repo_data in repos_data_fetched:
-        if not node:
+        if not repo_data:
             logger.warning(f"Skipping repo data due to missing 'node': {repo_data}")
             continue
         node = repo_data.get('node', {})
@@ -389,6 +395,8 @@ def _process_repo_data(repos_data_fetched: List[Dict]):
         })
     return processed_repos
 
+
+# --- Data Update Functions ---
 
 def update_accumulatedStars_1d():
     """更新数据库中 accumulatedStars_1d 字段的值"""
@@ -450,28 +458,11 @@ def _generate_and_save_json(data_fetch_func, db_path, filename, data_key, count_
     save_json(data_structure, os.path.join(config.DATA_DIR, filename))
     logger.info(f"Generated {filename} with {len(items)} items.")
 
-def generate_trending_json_files():
-    """从数据库查询数据并生成 JSON 文件"""
-    logger.info("Generating JSON files from database...")
+def generate_repo_json_files(base_meta):
+    """Generate JSON files related to repositories."""
+    logger.info("Generating repository JSON files...")
     repo_db_path = config.REPOS_SQLITE_DB_PATH
-    user_db_path = config.USERS_SQLITE_DB_PATH
-
-    try:
-        repos_total_count, user_total_count = get_total_count_by_datetime(
-            config.GITHUB_DB_INFO_PATH,
-            datetime.datetime.now().strftime("%Y%m%d"))
-    except Exception as e:
-        logger.error(f"Failed to get total counts: {e}")
-        # Decide how to handle this: return, raise, or use defaults
-        repos_total_count, user_total_count = 0, 0 # Example: use defaults
-
-    base_meta = {
-        "repos_total_count": repos_total_count,
-        "user_total_count": user_total_count,
-    }
-
-    # Define generation tasks
-    tasks = [
+    repo_tasks = [
         {
             "func": get_repos_hot,
             "db": repo_db_path,
@@ -488,7 +479,7 @@ def generate_trending_json_files():
             "file": config.DAILY_TRENDING_FILENAME,
             "data_key": "top_repos",
             "count_key": "top_repos_count",
-            "order": "stars_1d", # More descriptive order_by
+            "order": "stars_1d",
             "dir": "desc",
             "kwargs": {"range_day": 1, "limit": config.TRENDING_REPO_LIMIT}
         },
@@ -498,7 +489,7 @@ def generate_trending_json_files():
             "file": config.WEEKLY_TRENDING_FILENAME,
             "data_key": "top_repos",
             "count_key": "top_repos_count",
-            "order": "stars_7d", # More descriptive order_by
+            "order": "stars_7d",
             "dir": "desc",
             "kwargs": {"range_day": 7}
         },
@@ -508,24 +499,12 @@ def generate_trending_json_files():
             "file": config.MONTHLY_TRENDING_FILENAME,
             "data_key": "top_repos",
             "count_key": "top_repos_count",
-            "order": "stars_30d", # More descriptive order_by
+            "order": "stars_30d",
             "dir": "desc",
             "kwargs": {"range_day": 30}
         },
-        {
-            "func": get_top_followergazer_count_users,
-            "db": user_db_path,
-            "file": config.TOP_USERS_FILENAME,
-            "data_key": "top_users",
-            "count_key": "top_users_count",
-            "order": "followersCount",
-            "dir": "desc",
-            "kwargs": {'limit': config.TOP_USERS_LIMIT}
-        },
     ]
-
-    # Execute tasks
-    for task in tasks:
+    for task in repo_tasks:
         try:
             _generate_and_save_json(
                 data_fetch_func=task["func"],
@@ -540,7 +519,60 @@ def generate_trending_json_files():
             )
         except Exception as e:
             logger.error(f"Failed to generate {task['file']}: {e}", exc_info=True)
-            # Decide if one failure should stop all generation
+    logger.info("Finished generating repository JSON files.")
+
+def generate_user_json_files(base_meta):
+    """Generate JSON files related to users."""
+    logger.info("Generating user JSON files...")
+    user_db_path = config.USERS_SQLITE_DB_PATH
+    user_tasks = [
+        {
+            "func": get_top_followergazer_count_users,
+            "db": user_db_path,
+            "file": config.TOP_USERS_FILENAME,
+            "data_key": "top_users",
+            "count_key": "top_users_count",
+            "order": "followersCount",
+            "dir": "desc",
+            "kwargs": {'limit': config.TOP_USERS_LIMIT}
+        },
+    ]
+    for task in user_tasks:
+        try:
+            _generate_and_save_json(
+                data_fetch_func=task["func"],
+                db_path=task["db"],
+                filename=task["file"],
+                data_key=task["data_key"],
+                count_key=task["count_key"],
+                order_by=task["order"],
+                order_direction=task["dir"],
+                base_meta=base_meta,
+                **task["kwargs"]
+            )
+        except Exception as e:
+            logger.error(f"Failed to generate {task['file']}: {e}", exc_info=True)
+    logger.info("Finished generating user JSON files.")
+
+def generate_trending_json_files():
+    """从数据库查询数据并生成 JSON 文件 (Deprecated, use generate_repo_json_files and generate_user_json_files)"""
+    logger.warning("generate_trending_json_files is deprecated. Use generate_repo_json_files and generate_user_json_files instead.")
+    # Keep the old logic for compatibility or remove if sure it's not needed
+
+    try:
+        repos_total_count, user_total_count, _, _  = get_total_count_by_datetime(
+            config.GITHUB_DB_INFO_PATH,
+            datetime.datetime.now().strftime("%Y%m%d"))
+    except Exception as e:
+        logger.error(f"Failed to get total counts: {e}")
+        repos_total_count, user_total_count, _, _ = 0, 0, 0, 0
+
+    base_meta = {
+        "repos_total_count": repos_total_count,
+        "user_total_count": user_total_count,
+    }
+    generate_repo_json_files(base_meta)
+    generate_user_json_files(base_meta)
 
 
 def check_db_size():
@@ -597,7 +629,7 @@ def update_stars_data():
 
 
 def generate_json_files():
-    """生成趋势JSON文件"""
+    """生成JSON文件"""
     logger.info("Starting JSON Generation")
     try:
         generate_trending_json_files()
@@ -643,7 +675,6 @@ def run_pipeline():
     return True # Indicate success
 
 def main():
-    """主执行流程入口点"""
     if run_pipeline():
         logger.info("Script finished successfully")
         return 0

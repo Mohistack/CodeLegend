@@ -351,10 +351,10 @@ def batch_update_accumulated_stars(db_path: str, top_repos_data: Dict,
 
 
 def update_total_count(db_path: str, 
-                       repo_total_count: Optional[int] = None, 
-                       user_total_count: Optional[int] = None,
-                       fetched_repos_count: Optional[int] = None,
-                       fetched_users_count: Optional[int] = None):
+                       repo_total_count: Optional[int] = 0, 
+                       user_total_count: Optional[int] = 0,
+                       fetched_repos_count: Optional[int] = 0,
+                       fetched_users_count: Optional[int] = 0):
     """更新或创建当天的仓库和用户总数以及实际抓取数量记录。
 
     Args:
@@ -398,7 +398,7 @@ def update_total_count(db_path: str,
 
 
 # get the total count of repos by dt
-def get_total_count_by_datetime(db_path: str, date_str: str) -> Tuple[int, int]:
+def get_total_count_by_datetime(db_path: str, date_str: str) -> Tuple[int, int, int, int]:
     """获取指定日期 (YYYYMMDD) 的仓库和用户总数。
 
     Args:
@@ -406,13 +406,13 @@ def get_total_count_by_datetime(db_path: str, date_str: str) -> Tuple[int, int]:
         date_str (str): 日期字符串，格式为 'YYYYMMDD'。
 
     Returns:
-        Tuple[int, int]: 一个包含仓库总数和用户总数的元组 (repos_count, users_count)。
-                         如果找不到对应日期的记录，则返回 (0, 0)。
+        Tuple[int, int, int, int ]: 一个包含仓库总数和用户总数的元组 (repos_count, users_count,fetchedReposCount,fetchedUsersCount)。
+                         如果找不到对应日期的记录，则返回 (0, 0, 0, 0)。
     """
     with session_scope(db_path) as session:
         github_info = session.query(GithubInfo).filter_by(dt=date_str).first()
         if github_info:
-            return github_info.reposCount or 0, github_info.usersCount or 0
+            return github_info.reposCount or 0, github_info.usersCount or 0, github_info.fetchedReposCount or 0, github_info.fetchedUsersCount or 0
         else:
             logger.warning(f"No GithubInfo found for date {date_str} in {db_path}")
-            return 0, 0
+            return 0, 0, 0, 0

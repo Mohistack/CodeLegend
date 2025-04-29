@@ -83,16 +83,16 @@ UPDATE_TIME_FILENAME = "update_time.txt"
 
 # --- Database ---
 
-# DB_PATH is defined above
+# fetch data from GitHub API | 1000 limit given by GitHub API 
 DEFAULT_QUERY_LIMIT = 1000
-MAX_USERS = 1000
-MAX_REPOS = -1 # -1 means no limit
+MAX_USERS = 500
+MAX_REPOS = 1000 # -1 means no limit
 USER_TOP_REPOSITORIES_COUNT = 10
 REPOS_ONE_TIME = 100 # `first` limit of 100 records
 USERS_ONE_TIME = 25
 
 # --- GitHub API Rate Limiting ---
-
+# "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"
 # Rate limit is 5000 requests per hour for authenticated requests
 # Rate limit is 1000 requests per hour for Git events
 # Rate limit is 100 requests per hour for GraphQL API
