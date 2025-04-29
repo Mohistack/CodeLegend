@@ -163,6 +163,7 @@ def fetch_top_users_by_graphql(number_of_users: int = 5,
             "cursor": cursor
         }
     }
+    time.sleep(config.WAIT_TIME_PER_REQUEST)
     response = requests.request("POST",
                                 url,
                                 json=payload,
@@ -278,6 +279,7 @@ def fetch_top_repos_by_graphql(number_of_repos: int = 10,
             "cursor": cursor
         }
     }
+    time.sleep(config.WAIT_TIME_PER_REQUEST)
     response = requests.request("POST",
                                 url,
                                 json=payload,

@@ -91,6 +91,8 @@ USER_TOP_REPOSITORIES_COUNT = 10
 REPOS_ONE_TIME = 100 # `first` limit of 100 records
 USERS_ONE_TIME = 25
 
+WAIT_TIME_PER_REQUEST = 3 # sleep time between requests
+
 # --- GitHub API Rate Limiting ---
 # "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"
 # Rate limit is 5000 requests per hour for authenticated requests
