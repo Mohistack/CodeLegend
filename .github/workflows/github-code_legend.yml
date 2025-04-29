@@ -32,7 +32,7 @@ jobs:
 
       - name: Run fetch script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: python scripts/fetch_github_main.py
 
       - name: Update README badge URL # Keep this step if still needed
