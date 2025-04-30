@@ -86,11 +86,11 @@ UPDATE_TIME_FILENAME = "update_time.txt" # 更新时间记录文件名
 
 # 从 GitHub API 获取数据 | GitHub API 限制为 1000 条
 DEFAULT_QUERY_LIMIT = 1000 # 默认查询限制
-MAX_USERS = 50 # 最大用户数
-MAX_REPOS = 500 # 最大仓库数 (-1 表示无限制)
+MAX_USERS = 500 # 最大用户数
+MAX_REPOS = 1000 # 最大仓库数 (-1 表示无限制)
 USER_TOP_REPOSITORIES_COUNT = 10 # 每个用户获取其 Top 仓库的数量
-REPOS_ONE_TIME = 1000 # 每次请求获取的仓库数量 (`first` 参数限制为 100)
-USERS_ONE_TIME = 500 # 每次请求获取的用户数量
+REPOS_ONE_TIME = 100 # 每次请求获取的仓库数量 (`first` 参数限制为 100)
+USERS_ONE_TIME = 20 # 每次请求获取的用户数量
 
 WAIT_TIME_PER_REQUEST = 5 # 请求之间的等待时间 (秒)
 
