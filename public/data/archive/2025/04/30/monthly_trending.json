@@ -1,0 +1,1776 @@
+{
+  "meta": {
+    "updated_at": "2025-04-30T07:03:56Z",
+    "top_repos_count": 100,
+    "order_by": "stars_30d",
+    "order_direction": "desc",
+    "repos_total_count": 24914278,
+    "user_total_count": 14951186
+  },
+  "top_repos": [
+    {
+      "databaseId": 8514,
+      "id": "MDEwOlJlcG9zaXRvcnk4NTE0",
+      "name": "rails",
+      "url": "https://github.com/rails/rails",
+      "language": [
+        "Ruby ",
+        " JavaScript ",
+        " HTML"
+      ],
+      "description": "Ruby on Rails",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2008-04-11 02:19:47",
+      "updatedAt": "2025-04-30T07:03:23.036308"
+    },
+    {
+      "databaseId": 36502,
+      "id": "MDEwOlJlcG9zaXRvcnkzNjUwMg==",
+      "name": "git",
+      "url": "https://github.com/git/git",
+      "language": [
+        "C ",
+        " Shell ",
+        " Perl"
+      ],
+      "description": "Git Source Code Mirror - This is a publish-only repository but pull requests can be turned into patches to the mailing list via GitGitGadget (https://gitgitgadget.github.io/). Please follow Documentation/SubmittingPatches procedure for any of your improvements.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2008-07-23 14:21:26",
+      "updatedAt": "2025-04-30T07:03:23.052109"
+    },
+    {
+      "databaseId": 65252,
+      "id": "MDEwOlJlcG9zaXRvcnk2NTI1Mg==",
+      "name": "jekyll",
+      "url": "https://github.com/jekyll/jekyll",
+      "language": [
+        "Ruby ",
+        " Gherkin ",
+        " JavaScript"
+      ],
+      "description": ":globe_with_meridians: Jekyll is a blog-aware static site generator in Ruby",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2008-10-20 06:29:03",
+      "updatedAt": "2025-04-30T07:03:23.087351"
+    },
+    {
+      "databaseId": 156018,
+      "id": "MDEwOlJlcG9zaXRvcnkxNTYwMTg=",
+      "name": "redis",
+      "url": "https://github.com/redis/redis",
+      "language": [
+        "C ",
+        " Tcl ",
+        " Python"
+      ],
+      "description": "Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2009-03-21 22:32:25",
+      "updatedAt": "2025-04-30T07:03:14.656328"
+    },
+    {
+      "databaseId": 167174,
+      "id": "MDEwOlJlcG9zaXRvcnkxNjcxNzQ=",
+      "name": "jquery",
+      "url": "https://github.com/jquery/jquery",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " PHP"
+      ],
+      "description": "jQuery JavaScript Library",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2009-04-03 15:20:14",
+      "updatedAt": "2025-04-30T07:03:23.019501"
+    },
+    {
+      "databaseId": 237159,
+      "id": "MDEwOlJlcG9zaXRvcnkyMzcxNTk=",
+      "name": "express",
+      "url": "https://github.com/expressjs/express",
+      "language": [
+        "JavaScript ",
+        " Makefile ",
+        " Shell"
+      ],
+      "description": "Fast, unopinionated, minimalist web framework for node.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2009-06-26 18:56:01",
+      "updatedAt": "2025-04-30T07:03:14.664880"
+    },
+    {
+      "databaseId": 291137,
+      "id": "MDEwOlJlcG9zaXRvcnkyOTExMzc=",
+      "name": "ohmyzsh",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "language": [
+        "Shell ",
+        " Python ",
+        " Makefile"
+      ],
+      "description": "🙃   A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2009-08-28 18:15:37",
+      "updatedAt": "2025-04-30T07:03:05.915874"
+    },
+    {
+      "databaseId": 460078,
+      "id": "MDEwOlJlcG9zaXRvcnk0NjAwNzg=",
+      "name": "angular.js",
+      "url": "https://github.com/angular/angular.js",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " Shell"
+      ],
+      "description": "AngularJS - HTML enhanced for web apps!",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-01-06 00:34:37",
+      "updatedAt": "2025-04-30T07:03:23.025189"
+    },
+    {
+      "databaseId": 486550,
+      "id": "MDEwOlJlcG9zaXRvcnk0ODY1NTA=",
+      "name": "html5-boilerplate",
+      "url": "https://github.com/h5bp/html5-boilerplate",
+      "language": [
+        "JavaScript ",
+        " HTML"
+      ],
+      "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-01-24 18:03:24",
+      "updatedAt": "2025-04-30T07:03:23.035515"
+    },
+    {
+      "databaseId": 507775,
+      "id": "MDEwOlJlcG9zaXRvcnk1MDc3NzU=",
+      "name": "elasticsearch",
+      "url": "https://github.com/elastic/elasticsearch",
+      "language": [
+        "Java ",
+        " Groovy ",
+        " StringTemplate"
+      ],
+      "description": "Free and Open Source, Distributed, RESTful Search Engine",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-02-08 13:20:56",
+      "updatedAt": "2025-04-30T07:03:14.643794"
+    },
+    {
+      "databaseId": 519832,
+      "id": "MDEwOlJlcG9zaXRvcnk1MTk4MzI=",
+      "name": "mitmproxy",
+      "url": "https://github.com/mitmproxy/mitmproxy",
+      "language": [
+        "Python ",
+        " TypeScript ",
+        " JavaScript"
+      ],
+      "description": "An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-02-16 04:10:13",
+      "updatedAt": "2025-04-30T07:03:39.524026"
+    },
+    {
+      "databaseId": 529502,
+      "id": "MDEwOlJlcG9zaXRvcnk1Mjk1MDI=",
+      "name": "scrapy",
+      "url": "https://github.com/scrapy/scrapy",
+      "language": [
+        "Python ",
+        " HTML ",
+        " Roff"
+      ],
+      "description": "Scrapy, a fast high-level web crawling & scraping framework for Python.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-02-22 02:01:14",
+      "updatedAt": "2025-04-30T07:03:23.047298"
+    },
+    {
+      "databaseId": 557980,
+      "id": "MDEwOlJlcG9zaXRvcnk1NTc5ODA=",
+      "name": "socket.io",
+      "url": "https://github.com/socketio/socket.io",
+      "language": [
+        "TypeScript ",
+        " JavaScript ",
+        " Shell"
+      ],
+      "description": "Realtime application framework (Node.JS server)",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-03-11 18:24:48",
+      "updatedAt": "2025-04-30T07:03:14.690264"
+    },
+    {
+      "databaseId": 576201,
+      "id": "MDEwOlJlcG9zaXRvcnk1NzYyMDE=",
+      "name": "three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " Roff"
+      ],
+      "description": "JavaScript 3D Library.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-03-23 18:58:01",
+      "updatedAt": "2025-04-30T07:03:05.943043"
+    },
+    {
+      "databaseId": 596892,
+      "id": "MDEwOlJlcG9zaXRvcnk1OTY4OTI=",
+      "name": "flask",
+      "url": "https://github.com/pallets/flask",
+      "language": [
+        "Python ",
+        " HTML ",
+        " Shell"
+      ],
+      "description": "The Python micro framework for building web applications.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-04-06 11:11:59",
+      "updatedAt": "2025-04-30T07:03:14.654803"
+    },
+    {
+      "databaseId": 612230,
+      "id": "MDEwOlJlcG9zaXRvcnk2MTIyMzA=",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "language": [
+        "Shell ",
+        " Makefile ",
+        " Dockerfile"
+      ],
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-04-15 17:47:47",
+      "updatedAt": "2025-04-30T07:03:05.972116"
+    },
+    {
+      "databaseId": 667006,
+      "id": "MDEwOlJlcG9zaXRvcnk2NjcwMDY=",
+      "name": "video.js",
+      "url": "https://github.com/videojs/video.js",
+      "language": [
+        "JavaScript ",
+        " SCSS ",
+        " CSS"
+      ],
+      "description": "Video.js - open source HTML5 video player",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-05-14 18:45:10",
+      "updatedAt": "2025-04-30T07:03:39.531184"
+    },
+    {
+      "databaseId": 724712,
+      "id": "MDEwOlJlcG9zaXRvcnk3MjQ3MTI=",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "language": [
+        "Rust ",
+        " HTML ",
+        " Shell"
+      ],
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-06-16 20:39:03",
+      "updatedAt": "2025-04-30T07:03:05.945389"
+    },
+    {
+      "databaseId": 843222,
+      "id": "MDEwOlJlcG9zaXRvcnk4NDMyMjI=",
+      "name": "scikit-learn",
+      "url": "https://github.com/scikit-learn/scikit-learn",
+      "language": [
+        "Python ",
+        " Cython ",
+        " C++"
+      ],
+      "description": "scikit-learn: machine learning in Python",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-08-17 09:43:38",
+      "updatedAt": "2025-04-30T07:03:14.691031"
+    },
+    {
+      "databaseId": 858127,
+      "id": "MDEwOlJlcG9zaXRvcnk4NTgxMjc=",
+      "name": "pandas",
+      "url": "https://github.com/pandas-dev/pandas",
+      "language": [
+        "Python ",
+        " Cython ",
+        " HTML"
+      ],
+      "description": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-08-24 01:37:33",
+      "updatedAt": "2025-04-30T07:03:31.193589"
+    },
+    {
+      "databaseId": 873328,
+      "id": "MDEwOlJlcG9zaXRvcnk4NzMzMjg=",
+      "name": "sentry",
+      "url": "https://github.com/getsentry/sentry",
+      "language": [
+        "Python ",
+        " TypeScript ",
+        " HTML"
+      ],
+      "description": "Developer-first error tracking and performance monitoring",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-08-30 22:06:41",
+      "updatedAt": "2025-04-30T07:03:39.495715"
+    },
+    {
+      "databaseId": 892275,
+      "id": "MDEwOlJlcG9zaXRvcnk4OTIyNzU=",
+      "name": "retrofit",
+      "url": "https://github.com/square/retrofit",
+      "language": [
+        "HTML ",
+        " Java ",
+        " CSS"
+      ],
+      "description": "A type-safe HTTP client for Android and the JVM",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-09-06 21:39:43",
+      "updatedAt": "2025-04-30T07:03:31.224379"
+    },
+    {
+      "databaseId": 931135,
+      "id": "MDEwOlJlcG9zaXRvcnk5MzExMzU=",
+      "name": "Leaflet",
+      "url": "https://github.com/Leaflet/Leaflet",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " Handlebars"
+      ],
+      "description": "🍃 JavaScript library for mobile-friendly interactive maps 🇺🇦",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-09-22 16:57:44",
+      "updatedAt": "2025-04-30T07:03:39.466527"
+    },
+    {
+      "databaseId": 943149,
+      "id": "MDEwOlJlcG9zaXRvcnk5NDMxNDk=",
+      "name": "d3",
+      "url": "https://github.com/d3/d3",
+      "language": [
+        "Shell ",
+        " JavaScript"
+      ],
+      "description": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-09-27 17:22:42",
+      "updatedAt": "2025-04-30T07:03:05.939870"
+    },
+    {
+      "databaseId": 1039520,
+      "id": "MDEwOlJlcG9zaXRvcnkxMDM5NTIw",
+      "name": "youtube-dl",
+      "url": "https://github.com/ytdl-org/youtube-dl",
+      "language": [
+        "Python ",
+        " Shell ",
+        " Makefile"
+      ],
+      "description": "Command-line program to download videos from YouTube.com and other video sites",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-10-31 14:35:07",
+      "updatedAt": "2025-04-30T07:03:05.927522"
+    },
+    {
+      "databaseId": 1062897,
+      "id": "MDEwOlJlcG9zaXRvcnkxMDYyODk3",
+      "name": "gitignore",
+      "url": "https://github.com/github/gitignore",
+      "language": [],
+      "description": "A collection of useful .gitignore templates",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-11-08 20:17:14",
+      "updatedAt": "2025-04-30T07:03:05.920559"
+    },
+    {
+      "databaseId": 1148753,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTQ4NzUz",
+      "name": "spring-framework",
+      "url": "https://github.com/spring-projects/spring-framework",
+      "language": [
+        "Java ",
+        " Kotlin ",
+        " AspectJ"
+      ],
+      "description": "Spring Framework",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-12-08 04:04:45",
+      "updatedAt": "2025-04-30T07:03:23.029229"
+    },
+    {
+      "databaseId": 1181927,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTgxOTI3",
+      "name": "bitcoin",
+      "url": "https://github.com/bitcoin/bitcoin",
+      "language": [
+        "C++ ",
+        " Python ",
+        " C"
+      ],
+      "description": "Bitcoin Core integration/staging tree",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2010-12-19 15:16:43",
+      "updatedAt": "2025-04-30T07:03:05.975843"
+    },
+    {
+      "databaseId": 1334369,
+      "id": "MDEwOlJlcG9zaXRvcnkxMzM0MzY5",
+      "name": "resume.github.com",
+      "url": "https://github.com/resume/resume.github.com",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " CSS"
+      ],
+      "description": "Resumes generated using the GitHub informations",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-02-06 13:39:55",
+      "updatedAt": "2025-04-30T07:03:14.688733"
+    },
+    {
+      "databaseId": 1362490,
+      "id": "MDEwOlJlcG9zaXRvcnkxMzYyNDkw",
+      "name": "requests",
+      "url": "https://github.com/psf/requests",
+      "language": [
+        "Python ",
+        " Makefile"
+      ],
+      "description": "A simple, yet elegant, HTTP library.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-02-13 18:38:17",
+      "updatedAt": "2025-04-30T07:03:23.064695"
+    },
+    {
+      "databaseId": 1424470,
+      "id": "MDEwOlJlcG9zaXRvcnkxNDI0NDcw",
+      "name": "moment",
+      "url": "https://github.com/moment/moment",
+      "language": [
+        "JavaScript ",
+        " TypeScript ",
+        " Shell"
+      ],
+      "description": "Parse, validate, manipulate, and display dates in javascript.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-03-01 02:46:06",
+      "updatedAt": "2025-04-30T07:03:31.171257"
+    },
+    {
+      "databaseId": 1614410,
+      "id": "MDEwOlJlcG9zaXRvcnkxNjE0NDEw",
+      "name": "FFmpeg",
+      "url": "https://github.com/FFmpeg/FFmpeg",
+      "language": [
+        "C ",
+        " Assembly ",
+        " Makefile"
+      ],
+      "description": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-04-14 14:12:38",
+      "updatedAt": "2025-04-30T07:03:31.154771"
+    },
+    {
+      "databaseId": 1644196,
+      "id": "MDEwOlJlcG9zaXRvcnkxNjQ0MTk2",
+      "name": "julia",
+      "url": "https://github.com/JuliaLang/julia",
+      "language": [
+        "Julia ",
+        " C ",
+        " C++"
+      ],
+      "description": "The Julia Programming Language",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-04-21 07:01:50",
+      "updatedAt": "2025-04-30T07:03:31.180081"
+    },
+    {
+      "databaseId": 1663468,
+      "id": "MDEwOlJlcG9zaXRvcnkxNjYzNDY4",
+      "name": "pdf.js",
+      "url": "https://github.com/mozilla/pdf.js",
+      "language": [
+        "JavaScript ",
+        " Fluent ",
+        " CSS"
+      ],
+      "description": "PDF Reader in JavaScript",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-04-26 06:32:03",
+      "updatedAt": "2025-04-30T07:03:23.079552"
+    },
+    {
+      "databaseId": 1700621,
+      "id": "MDEwOlJlcG9zaXRvcnkxNzAwNjIx",
+      "name": "normalize.css",
+      "url": "https://github.com/necolas/normalize.css",
+      "language": [
+        "CSS"
+      ],
+      "description": "A modern alternative to CSS resets",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-05-04 10:20:25",
+      "updatedAt": "2025-04-30T07:03:23.063155"
+    },
+    {
+      "databaseId": 1861458,
+      "id": "MDEwOlJlcG9zaXRvcnkxODYxNDU4",
+      "name": "reveal.js",
+      "url": "https://github.com/hakimel/reveal.js",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " SCSS"
+      ],
+      "description": "The HTML Presentation Framework",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-06-07 18:54:22",
+      "updatedAt": "2025-04-30T07:03:14.657099"
+    },
+    {
+      "databaseId": 1863329,
+      "id": "MDEwOlJlcG9zaXRvcnkxODYzMzI5",
+      "name": "laravel",
+      "url": "https://github.com/laravel/laravel",
+      "language": [
+        "Blade ",
+        " PHP ",
+        " CSS"
+      ],
+      "description": "Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation for your next big idea — freeing you to create without sweating the small things.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-06-08 03:06:08",
+      "updatedAt": "2025-04-30T07:03:14.623958"
+    },
+    {
+      "databaseId": 1903522,
+      "id": "MDEwOlJlcG9zaXRvcnkxOTAzNTIy",
+      "name": "php-src",
+      "url": "https://github.com/php/php-src",
+      "language": [
+        "C ",
+        " PHP ",
+        " C++"
+      ],
+      "description": "The PHP Interpreter",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-06-16 01:52:25",
+      "updatedAt": "2025-04-30T07:03:39.523219"
+    },
+    {
+      "databaseId": 2126244,
+      "id": "MDEwOlJlcG9zaXRvcnkyMTI2MjQ0",
+      "name": "bootstrap",
+      "url": "https://github.com/twbs/bootstrap",
+      "language": [
+        "MDX ",
+        " JavaScript ",
+        " Astro"
+      ],
+      "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-07-29 21:19:00",
+      "updatedAt": "2025-04-30T07:03:05.917421"
+    },
+    {
+      "databaseId": 2325298,
+      "id": "MDEwOlJlcG9zaXRvcnkyMzI1Mjk4",
+      "name": "linux",
+      "url": "https://github.com/torvalds/linux",
+      "language": [
+        "C ",
+        " Assembly ",
+        " Shell"
+      ],
+      "description": "Linux kernel source tree",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-09-04 22:48:12",
+      "updatedAt": "2025-04-30T07:03:05.911105"
+    },
+    {
+      "databaseId": 2561582,
+      "id": "MDEwOlJlcG9zaXRvcnkyNTYxNTgy",
+      "name": "animate.css",
+      "url": "https://github.com/animate-css/animate.css",
+      "language": [
+        "CSS ",
+        " HTML ",
+        " JavaScript"
+      ],
+      "description": "🍿 A cross-browser library of CSS animations. As easy to use as an easy thing.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2011-10-12 10:07:38",
+      "updatedAt": "2025-04-30T07:03:14.620720"
+    },
+    {
+      "databaseId": 3100121,
+      "id": "MDEwOlJlcG9zaXRvcnkzMTAwMTIx",
+      "name": "nw.js",
+      "url": "https://github.com/nwjs/nw.js",
+      "language": [
+        "JavaScript ",
+        " C++ ",
+        " Python"
+      ],
+      "description": "Call all Node.js modules directly from DOM/WebWorker and enable a new way of writing applications with all Web technologies.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-01-04 06:21:10",
+      "updatedAt": "2025-04-30T07:03:39.497301"
+    },
+    {
+      "databaseId": 3214406,
+      "id": "MDEwOlJlcG9zaXRvcnkzMjE0NDA2",
+      "name": "meteor",
+      "url": "https://github.com/meteor/meteor",
+      "language": [
+        "JavaScript ",
+        " TypeScript ",
+        " Shell"
+      ],
+      "description": "Meteor, the JavaScript App Platform",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-01-19 01:58:17",
+      "updatedAt": "2025-04-30T07:03:31.202294"
+    },
+    {
+      "databaseId": 3228505,
+      "id": "MDEwOlJlcG9zaXRvcnkzMjI4NTA1",
+      "name": "atom",
+      "url": "https://github.com/atom/atom",
+      "language": [
+        "JavaScript ",
+        " Less ",
+        " CoffeeScript"
+      ],
+      "description": ":atom: The hackable text editor",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-01-20 18:18:21",
+      "updatedAt": "2025-04-30T07:03:23.012139"
+    },
+    {
+      "databaseId": 3402537,
+      "id": "MDEwOlJlcG9zaXRvcnkzNDAyNTM3",
+      "name": "Front-end-Developer-Interview-Questions",
+      "url": "https://github.com/h5bp/Front-end-Developer-Interview-Questions",
+      "language": [
+        "Nunjucks ",
+        " CSS ",
+        " JavaScript"
+      ],
+      "description": "A list of helpful front-end related questions you can use to interview potential candidates, test yourself or completely ignore.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-02-09 23:34:10",
+      "updatedAt": "2025-04-30T07:03:23.014577"
+    },
+    {
+      "databaseId": 3432266,
+      "id": "MDEwOlJlcG9zaXRvcnkzNDMyMjY2",
+      "name": "kotlin",
+      "url": "https://github.com/JetBrains/kotlin",
+      "language": [
+        "Kotlin ",
+        " Java ",
+        " Swift"
+      ],
+      "description": "The Kotlin Programming Language. ",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-02-13 17:29:58",
+      "updatedAt": "2025-04-30T07:03:23.081911"
+    },
+    {
+      "databaseId": 3470471,
+      "id": "MDEwOlJlcG9zaXRvcnkzNDcwNDcx",
+      "name": "Font-Awesome",
+      "url": "https://github.com/FortAwesome/Font-Awesome",
+      "language": [
+        "JavaScript ",
+        " SCSS ",
+        " Less"
+      ],
+      "description": "The iconic SVG, font, and CSS toolkit",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-02-17 14:19:43",
+      "updatedAt": "2025-04-30T07:03:14.636512"
+    },
+    {
+      "databaseId": 3482588,
+      "id": "MDEwOlJlcG9zaXRvcnkzNDgyNTg4",
+      "name": "SecLists",
+      "url": "https://github.com/danielmiessler/SecLists",
+      "language": [
+        "PHP ",
+        " Python ",
+        " Classic ASP"
+      ],
+      "description": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-02-19 01:30:18",
+      "updatedAt": "2025-04-30T07:03:14.687983"
+    },
+    {
+      "databaseId": 3638964,
+      "id": "MDEwOlJlcG9zaXRvcnkzNjM4OTY0",
+      "name": "ansible",
+      "url": "https://github.com/ansible/ansible",
+      "language": [
+        "Python ",
+        " PowerShell ",
+        " Shell"
+      ],
+      "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-03-06 14:58:02",
+      "updatedAt": "2025-04-30T07:03:14.674159"
+    },
+    {
+      "databaseId": 3678731,
+      "id": "MDEwOlJlcG9zaXRvcnkzNjc4NzMx",
+      "name": "webpack",
+      "url": "https://github.com/webpack/webpack",
+      "language": [
+        "JavaScript ",
+        " CSS ",
+        " TypeScript"
+      ],
+      "description": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through \"loaders\", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-03-10 10:08:14",
+      "updatedAt": "2025-04-30T07:03:14.671076"
+    },
+    {
+      "databaseId": 3721224,
+      "id": "MDEwOlJlcG9zaXRvcnkzNzIxMjI0",
+      "name": "swiper",
+      "url": "https://github.com/nolimits4web/swiper",
+      "language": [
+        "JavaScript ",
+        " SCSS ",
+        " Less"
+      ],
+      "description": "Most modern mobile touch slider with hardware accelerated transitions",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-03-14 19:11:45",
+      "updatedAt": "2025-04-30T07:03:39.490985"
+    },
+    {
+      "databaseId": 3774328,
+      "id": "MDEwOlJlcG9zaXRvcnkzNzc0MzI4",
+      "name": "wrk",
+      "url": "https://github.com/wg/wrk",
+      "language": [
+        "C ",
+        " Lua ",
+        " Makefile"
+      ],
+      "description": "Modern HTTP benchmarking tool",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-03-20 11:12:28",
+      "updatedAt": "2025-04-30T07:03:39.525666"
+    },
+    {
+      "databaseId": 3955647,
+      "id": "MDEwOlJlcG9zaXRvcnkzOTU1NjQ3",
+      "name": "lodash",
+      "url": "https://github.com/lodash/lodash",
+      "language": [
+        "JavaScript ",
+        " HTML ",
+        " EJS"
+      ],
+      "description": "A modern JavaScript utility library delivering modularity, performance, & extras.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-04-07 04:11:46",
+      "updatedAt": "2025-04-30T07:03:23.012958"
+    },
+    {
+      "databaseId": 4164482,
+      "id": "MDEwOlJlcG9zaXRvcnk0MTY0NDgy",
+      "name": "django",
+      "url": "https://github.com/django/django",
+      "language": [
+        "Python ",
+        " Jinja ",
+        " JavaScript"
+      ],
+      "description": "The Web framework for perfectionists with deadlines.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-04-28 02:47:18",
+      "updatedAt": "2025-04-30T07:03:05.974069"
+    },
+    {
+      "databaseId": 4311796,
+      "id": "MDEwOlJlcG9zaXRvcnk0MzExNzk2",
+      "name": "markdown-here",
+      "url": "https://github.com/adam-p/markdown-here",
+      "language": [
+        "JavaScript ",
+        " CSS ",
+        " HTML"
+      ],
+      "description": "Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-05-13 03:27:22",
+      "updatedAt": "2025-04-30T07:03:23.017901"
+    },
+    {
+      "databaseId": 4578002,
+      "id": "MDEwOlJlcG9zaXRvcnk0NTc4MDAy",
+      "name": "python-patterns",
+      "url": "https://github.com/faif/python-patterns",
+      "language": [
+        "Python ",
+        " Makefile ",
+        " Shell"
+      ],
+      "description": "A collection of design patterns/idioms in Python",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-06-06 21:02:35",
+      "updatedAt": "2025-04-30T07:03:39.483822"
+    },
+    {
+      "databaseId": 4710920,
+      "id": "MDEwOlJlcG9zaXRvcnk0NzEwOTIw",
+      "name": "dubbo",
+      "url": "https://github.com/apache/dubbo",
+      "language": [
+        "Java ",
+        " Groovy ",
+        " Mustache"
+      ],
+      "description": "The java implementation of Apache Dubbo. An RPC and microservice framework.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-06-19 07:56:02",
+      "updatedAt": "2025-04-30T07:03:39.490183"
+    },
+    {
+      "databaseId": 5108051,
+      "id": "MDEwOlJlcG9zaXRvcnk1MTA4MDUx",
+      "name": "opencv",
+      "url": "https://github.com/opencv/opencv",
+      "language": [
+        "C++ ",
+        " C ",
+        " Python"
+      ],
+      "description": "Open Source Computer Vision Library",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-07-19 09:40:17",
+      "updatedAt": "2025-04-30T07:03:14.618166"
+    },
+    {
+      "databaseId": 5152285,
+      "id": "MDEwOlJlcG9zaXRvcnk1MTUyMjg1",
+      "name": "okhttp",
+      "url": "https://github.com/square/okhttp",
+      "language": [
+        "Kotlin ",
+        " Java ",
+        " Shell"
+      ],
+      "description": "Square’s meticulous HTTP client for the JVM, Android, and GraalVM.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-07-23 13:42:55",
+      "updatedAt": "2025-04-30T07:03:31.183252"
+    },
+    {
+      "databaseId": 5239185,
+      "id": "MDEwOlJlcG9zaXRvcnk1MjM5MTg1",
+      "name": "quill",
+      "url": "https://github.com/slab/quill",
+      "language": [
+        "TypeScript ",
+        " MDX ",
+        " JavaScript"
+      ],
+      "description": "Quill is a modern WYSIWYG editor built for compatibility and extensibility",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-07-30 23:23:18",
+      "updatedAt": "2025-04-30T07:03:31.194416"
+    },
+    {
+      "databaseId": 5271882,
+      "id": "MDEwOlJlcG9zaXRvcnk1MjcxODgy",
+      "name": "build-web-application-with-golang",
+      "url": "https://github.com/astaxie/build-web-application-with-golang",
+      "language": [
+        "Go ",
+        " Groovy ",
+        " Shell"
+      ],
+      "description": "A golang ebook intro how to build a web with golang",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-08-02 11:49:35",
+      "updatedAt": "2025-04-30T07:03:31.222021"
+    },
+    {
+      "databaseId": 5483330,
+      "id": "MDEwOlJlcG9zaXRvcnk1NDgzMzMw",
+      "name": "you-get",
+      "url": "https://github.com/soimort/you-get",
+      "language": [
+        "Python ",
+        " Shell ",
+        " Makefile"
+      ],
+      "description": ":arrow_double_down: Dumb downloader that scrapes the web",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-08-20 15:53:36",
+      "updatedAt": "2025-04-30T07:03:23.043337"
+    },
+    {
+      "databaseId": 5625464,
+      "id": "MDEwOlJlcG9zaXRvcnk1NjI1NDY0",
+      "name": "pyenv",
+      "url": "https://github.com/pyenv/pyenv",
+      "language": [
+        "Roff ",
+        " Shell ",
+        " Python"
+      ],
+      "description": "Simple Python version management",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-08-31 06:57:52",
+      "updatedAt": "2025-04-30T07:03:39.478901"
+    },
+    {
+      "databaseId": 5923215,
+      "id": "MDEwOlJlcG9zaXRvcnk1OTIzMjE1",
+      "name": "hexo",
+      "url": "https://github.com/hexojs/hexo",
+      "language": [
+        "TypeScript ",
+        " JavaScript"
+      ],
+      "description": "A fast, simple & powerful blog framework, powered by Node.js.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-09-23 15:17:08",
+      "updatedAt": "2025-04-30T07:03:39.503645"
+    },
+    {
+      "databaseId": 6093316,
+      "id": "MDEwOlJlcG9zaXRvcnk2MDkzMzE2",
+      "name": "DefinitelyTyped",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+      "language": [
+        "TypeScript ",
+        " JavaScript ",
+        " Shell"
+      ],
+      "description": "The repository for high quality TypeScript type definitions.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-10-05 16:39:45",
+      "updatedAt": "2025-04-30T07:03:31.152196"
+    },
+    {
+      "databaseId": 6296790,
+      "id": "MDEwOlJlcG9zaXRvcnk2Mjk2Nzkw",
+      "name": "spring-boot",
+      "url": "https://github.com/spring-projects/spring-boot",
+      "language": [
+        "Java ",
+        " Kotlin ",
+        " HTML"
+      ],
+      "description": "Spring Boot helps you to create Spring-powered, production-grade applications and services with absolute minimum fuss.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-10-19 15:02:57",
+      "updatedAt": "2025-04-30T07:03:14.633382"
+    },
+    {
+      "databaseId": 6498492,
+      "id": "MDEwOlJlcG9zaXRvcnk2NDk4NDky",
+      "name": "javascript",
+      "url": "https://github.com/airbnb/javascript",
+      "language": [
+        "JavaScript"
+      ],
+      "description": "JavaScript Style Guide",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-11-01 23:13:50",
+      "updatedAt": "2025-04-30T07:03:05.924430"
+    },
+    {
+      "databaseId": 6838921,
+      "id": "MDEwOlJlcG9zaXRvcnk2ODM4OTIx",
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "language": [
+        "Go ",
+        " TypeScript ",
+        " Yacc"
+      ],
+      "description": "The Prometheus monitoring system and time series database.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2012-11-24 11:14:12",
+      "updatedAt": "2025-04-30T07:03:23.027593"
+    },
+    {
+      "databaseId": 7508411,
+      "id": "MDEwOlJlcG9zaXRvcnk3NTA4NDEx",
+      "name": "RxJava",
+      "url": "https://github.com/ReactiveX/RxJava",
+      "language": [
+        "Java ",
+        " CSS ",
+        " Shell"
+      ],
+      "description": "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-01-08 20:11:48",
+      "updatedAt": "2025-04-30T07:03:31.170458"
+    },
+    {
+      "databaseId": 7569578,
+      "id": "MDEwOlJlcG9zaXRvcnk3NTY5NTc4",
+      "name": "discourse",
+      "url": "https://github.com/discourse/discourse",
+      "language": [
+        "Ruby ",
+        " JavaScript ",
+        " HTML"
+      ],
+      "description": "A platform for community discussion. Free, open, simple.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-01-12 00:25:55",
+      "updatedAt": "2025-04-30T07:03:31.211016"
+    },
+    {
+      "databaseId": 7600409,
+      "id": "MDEwOlJlcG9zaXRvcnk3NjAwNDA5",
+      "name": "shadowsocks-windows",
+      "url": "https://github.com/shadowsocks/shadowsocks-windows",
+      "language": [
+        "C# ",
+        " JavaScript ",
+        " Shell"
+      ],
+      "description": "A C# port of shadowsocks",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-01-14 07:54:16",
+      "updatedAt": "2025-04-30T07:03:23.023294"
+    },
+    {
+      "databaseId": 7691631,
+      "id": "MDEwOlJlcG9zaXRvcnk3NjkxNjMx",
+      "name": "moby",
+      "url": "https://github.com/moby/moby",
+      "language": [
+        "Go ",
+        " Shell ",
+        " Dockerfile"
+      ],
+      "description": "The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-01-18 18:10:57",
+      "updatedAt": "2025-04-30T07:03:14.654004"
+    },
+    {
+      "databaseId": 7741856,
+      "id": "MDEwOlJlcG9zaXRvcnk3NzQxODU2",
+      "name": "pixijs",
+      "url": "https://github.com/pixijs/pixijs",
+      "language": [
+        "TypeScript ",
+        " JavaScript ",
+        " WGSL"
+      ],
+      "description": "The HTML5 Creation Engine: Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-01-21 22:40:50",
+      "updatedAt": "2025-04-30T07:03:31.196758"
+    },
+    {
+      "databaseId": 8681349,
+      "id": "MDEwOlJlcG9zaXRvcnk4NjgxMzQ5",
+      "name": "huginn",
+      "url": "https://github.com/huginn/huginn",
+      "language": [
+        "Ruby ",
+        " HTML ",
+        " JavaScript"
+      ],
+      "description": "Create agents that monitor and act on your behalf.  Your agents are standing by!",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-03-10 06:00:31",
+      "updatedAt": "2025-04-30T07:03:31.188870"
+    },
+    {
+      "databaseId": 8843683,
+      "id": "MDEwOlJlcG9zaXRvcnk4ODQzNjgz",
+      "name": "Chart.js",
+      "url": "https://github.com/chartjs/Chart.js",
+      "language": [
+        "JavaScript ",
+        " TypeScript ",
+        " Shell"
+      ],
+      "description": "Simple HTML5 Charts using the <canvas> tag",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-03-17 23:56:36",
+      "updatedAt": "2025-04-30T07:03:14.670315"
+    },
+    {
+      "databaseId": 8859474,
+      "id": "MDEwOlJlcG9zaXRvcnk4ODU5NDc0",
+      "name": "jadx",
+      "url": "https://github.com/skylot/jadx",
+      "language": [
+        "Java ",
+        " Smali ",
+        " Kotlin"
+      ],
+      "description": "Dex to Java decompiler",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-03-18 17:08:21",
+      "updatedAt": "2025-04-30T07:03:31.214942"
+    },
+    {
+      "databaseId": 9185792,
+      "id": "MDEwOlJlcG9zaXRvcnk5MTg1Nzky",
+      "name": "echarts",
+      "url": "https://github.com/apache/echarts",
+      "language": [
+        "TypeScript ",
+        " JavaScript ",
+        " Smarty"
+      ],
+      "description": "Apache ECharts is a powerful, interactive charting and data visualization library for browser",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-04-03 03:18:59",
+      "updatedAt": "2025-04-30T07:03:14.681824"
+    },
+    {
+      "databaseId": 9309093,
+      "id": "MDEwOlJlcG9zaXRvcnk5MzA5MDkz",
+      "name": "Semantic-UI",
+      "url": "https://github.com/Semantic-Org/Semantic-UI",
+      "language": [
+        "JavaScript ",
+        " Less ",
+        " HTML"
+      ],
+      "description": "Semantic is a UI component framework based around useful principles from natural language.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-04-08 23:32:04",
+      "updatedAt": "2025-04-30T07:03:23.075572"
+    },
+    {
+      "databaseId": 9384267,
+      "id": "MDEwOlJlcG9zaXRvcnk5Mzg0MjY3",
+      "name": "electron",
+      "url": "https://github.com/electron/electron",
+      "language": [
+        "C++ ",
+        " TypeScript ",
+        " Objective-C++"
+      ],
+      "description": ":electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-04-12 01:47:36",
+      "updatedAt": "2025-04-30T07:03:05.935975"
+    },
+    {
+      "databaseId": 9393759,
+      "id": "MDEwOlJlcG9zaXRvcnk5MzkzNzU5",
+      "name": "phaser",
+      "url": "https://github.com/phaserjs/phaser",
+      "language": [
+        "JavaScript ",
+        " TypeScript ",
+        " GLSL"
+      ],
+      "description": "Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-04-12 12:27:51",
+      "updatedAt": "2025-04-30T07:03:39.542252"
+    },
+    {
+      "databaseId": 9852918,
+      "id": "MDEwOlJlcG9zaXRvcnk5ODUyOTE4",
+      "name": "Ghost",
+      "url": "https://github.com/TryGhost/Ghost",
+      "language": [
+        "JavaScript ",
+        " TypeScript ",
+        " CSS"
+      ],
+      "description": "Independent technology for modern publishing, memberships, subscriptions and newsletters.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-05-04 11:09:13",
+      "updatedAt": "2025-04-30T07:03:31.156518"
+    },
+    {
+      "databaseId": 10187082,
+      "id": "MDEwOlJlcG9zaXRvcnkxMDE4NzA4Mg==",
+      "name": "pm2",
+      "url": "https://github.com/Unitech/pm2",
+      "language": [
+        "JavaScript ",
+        " Shell ",
+        " Smarty"
+      ],
+      "description": "Node.js Production Process Manager with a built-in Load Balancer.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-05-21 03:25:25",
+      "updatedAt": "2025-04-30T07:03:39.474027"
+    },
+    {
+      "databaseId": 10270250,
+      "id": "MDEwOlJlcG9zaXRvcnkxMDI3MDI1MA==",
+      "name": "react",
+      "url": "https://github.com/facebook/react",
+      "language": [
+        "JavaScript ",
+        " TypeScript ",
+        " HTML"
+      ],
+      "description": "The library for web and native user interfaces.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-05-24 16:15:54",
+      "updatedAt": "2025-04-30T07:03:05.907163"
+    },
+    {
+      "databaseId": 10744183,
+      "id": "MDEwOlJlcG9zaXRvcnkxMDc0NDE4Mw==",
+      "name": "netdata",
+      "url": "https://github.com/netdata/netdata",
+      "language": [
+        "C ",
+        " Go ",
+        " Shell"
+      ],
+      "description": "X-Ray Vision for your infrastructure!",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-06-17 18:39:10",
+      "updatedAt": "2025-04-30T07:03:14.638060"
+    },
+    {
+      "databaseId": 10865436,
+      "id": "MDEwOlJlcG9zaXRvcnkxMDg2NTQzNg==",
+      "name": "frontend-dev-bookmarks",
+      "url": "https://github.com/dypsilon/frontend-dev-bookmarks",
+      "language": [],
+      "description": "Manually curated collection of resources for frontend web developers.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-06-22 13:23:55",
+      "updatedAt": "2025-04-30T07:03:31.218115"
+    },
+    {
+      "databaseId": 11171548,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTE3MTU0OA==",
+      "name": "json",
+      "url": "https://github.com/nlohmann/json",
+      "language": [
+        "C++ ",
+        " CMake ",
+        " Python"
+      ],
+      "description": "JSON for Modern C++",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-07-04 08:47:49",
+      "updatedAt": "2025-04-30T07:03:31.192824"
+    },
+    {
+      "databaseId": 11177928,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTE3NzkyOA==",
+      "name": "Projects",
+      "url": "https://github.com/karan/Projects",
+      "language": [],
+      "description": ":page_with_curl: A list of practical projects that anyone can solve in any programming language.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-07-04 13:37:27",
+      "updatedAt": "2025-04-30T07:03:31.185678"
+    },
+    {
+      "databaseId": 11180687,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTE4MDY4Nw==",
+      "name": "hugo",
+      "url": "https://github.com/gohugoio/hugo",
+      "language": [
+        "Go ",
+        " JavaScript ",
+        " HTML"
+      ],
+      "description": "The world’s fastest framework for building websites.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-07-04 15:26:26",
+      "updatedAt": "2025-04-30T07:03:14.624721"
+    },
+    {
+      "databaseId": 11225014,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTIyNTAxNA==",
+      "name": "etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "language": [
+        "Go ",
+        " Shell ",
+        " Jsonnet"
+      ],
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-07-06 21:57:21",
+      "updatedAt": "2025-04-30T07:03:31.155681"
+    },
+    {
+      "databaseId": 11730342,
+      "id": "MDEwOlJlcG9zaXRvcnkxMTczMDM0Mg==",
+      "name": "vue",
+      "url": "https://github.com/vuejs/vue",
+      "language": [
+        "TypeScript ",
+        " JavaScript ",
+        " HTML"
+      ],
+      "description": "This is the repo for Vue 2. For Vue 3, go to https://github.com/vuejs/core",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-07-29 03:24:51",
+      "updatedAt": "2025-04-30T07:03:05.909533"
+    },
+    {
+      "databaseId": 12256376,
+      "id": "MDEwOlJlcG9zaXRvcnkxMjI1NjM3Ng==",
+      "name": "ionic-framework",
+      "url": "https://github.com/ionic-team/ionic-framework",
+      "language": [
+        "TypeScript ",
+        " HTML ",
+        " SCSS"
+      ],
+      "description": "A powerful cross-platform UI toolkit for building native-quality iOS, Android, and Progressive Web Apps with HTML, CSS, and JavaScript.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-08-20 23:06:02",
+      "updatedAt": "2025-04-30T07:03:23.073250"
+    },
+    {
+      "databaseId": 12574344,
+      "id": "MDEwOlJlcG9zaXRvcnkxMjU3NDM0NA==",
+      "name": "cobra",
+      "url": "https://github.com/spf13/cobra",
+      "language": [
+        "Go ",
+        " Makefile"
+      ],
+      "description": "A Commander for modern Go CLI interactions",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-09-03 20:40:26",
+      "updatedAt": "2025-04-30T07:03:39.502883"
+    },
+    {
+      "databaseId": 12888993,
+      "id": "MDEwOlJlcG9zaXRvcnkxMjg4ODk5Mw==",
+      "name": "core",
+      "url": "https://github.com/home-assistant/core",
+      "language": [
+        "Python ",
+        " Shell ",
+        " Dockerfile"
+      ],
+      "description": ":house_with_garden: Open source home automation that puts local control and privacy first.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-09-17 07:29:48",
+      "updatedAt": "2025-04-30T07:03:14.629433"
+    },
+    {
+      "databaseId": 13233158,
+      "id": "MDEwOlJlcG9zaXRvcnkxMzIzMzE1OA==",
+      "name": "obs-studio",
+      "url": "https://github.com/obsproject/obs-studio",
+      "language": [
+        "C ",
+        " C++ ",
+        " CMake"
+      ],
+      "description": "OBS Studio - Free and open source software for live streaming and screen recording",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-10-01 02:40:31",
+      "updatedAt": "2025-04-30T07:03:14.679522"
+    },
+    {
+      "databaseId": 13491895,
+      "id": "MDEwOlJlcG9zaXRvcnkxMzQ5MTg5NQ==",
+      "name": "free-programming-books",
+      "url": "https://github.com/EbookFoundation/free-programming-books",
+      "language": [
+        "HTML"
+      ],
+      "description": ":books: Freely available programming books",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-10-11 06:50:37",
+      "updatedAt": "2025-04-30T07:03:05.901279"
+    },
+    {
+      "databaseId": 13807606,
+      "id": "MDEwOlJlcG9zaXRvcnkxMzgwNzYwNg==",
+      "name": "fzf",
+      "url": "https://github.com/junegunn/fzf",
+      "language": [
+        "Go ",
+        " Ruby ",
+        " Shell"
+      ],
+      "description": ":cherry_blossom: A command-line fuzzy finder",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-10-23 16:04:23",
+      "updatedAt": "2025-04-30T07:03:14.651639"
+    },
+    {
+      "databaseId": 13855476,
+      "id": "MDEwOlJlcG9zaXRvcnkxMzg1NTQ3Ng==",
+      "name": "gorm",
+      "url": "https://github.com/go-gorm/gorm",
+      "language": [
+        "Go ",
+        " Shell"
+      ],
+      "description": "The fantastic ORM library for Golang, aims to be developer friendly",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-10-25 08:31:38",
+      "updatedAt": "2025-04-30T07:03:39.539055"
+    },
+    {
+      "databaseId": 14098069,
+      "id": "MDEwOlJlcG9zaXRvcnkxNDA5ODA2OQ==",
+      "name": "free-programming-books-zh_CN",
+      "url": "https://github.com/justjavac/free-programming-books-zh_CN",
+      "language": [],
+      "description": ":books: 免费的计算机编程类中文书籍，欢迎投稿",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-11-04 01:59:19",
+      "updatedAt": "2025-04-30T07:03:05.937511"
+    },
+    {
+      "databaseId": 14194174,
+      "id": "MDEwOlJlcG9zaXRvcnkxNDE5NDE3NA==",
+      "name": "what-happens-when",
+      "url": "https://github.com/alex/what-happens-when",
+      "language": [],
+      "description": "An attempt to answer the age old interview question \"What happens when you type google.com into your browser and press enter?\"",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-11-07 04:30:06",
+      "updatedAt": "2025-04-30T07:03:39.480518"
+    },
+    {
+      "databaseId": 14440270,
+      "id": "MDEwOlJlcG9zaXRvcnkxNDQ0MDI3MA==",
+      "name": "You-Dont-Know-JS",
+      "url": "https://github.com/getify/You-Dont-Know-JS",
+      "language": [],
+      "description": "A book series (2 published editions) on the JS language.",
+      "accumulatedStars": null,
+      "accumulatedStars_1d": 0,
+      "accumulatedStars_7d": 0,
+      "accumulatedStars_30d": 0,
+      "createdAt": "2013-11-16 02:37:24",
+      "updatedAt": "2025-04-30T07:03:05.913479"
+    }
+  ]
+}
