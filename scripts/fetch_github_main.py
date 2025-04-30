@@ -75,6 +75,7 @@ query getTopUsers(
 					id
 					databaseId
 					name
+                    location
 					followers {
 						totalCount
 					}
@@ -148,35 +149,84 @@ def retry_on_network_error(max_retries=3, delay=5, allowed_exceptions=(requests.
 
 
 @retry_on_network_error(max_retries=3, delay=2)
-def fetch_top_users_by_graphql(number_of_users: int = 5,
-                               usertopRepositories_count: int = 10,
-                               cursor: Optional[str] = None):
-    logger.info("Fetching top users using GraphQL...") # Changed print to logger.info
+def _make_graphql_request(query: str, operation_name: str, variables: Dict):
+    """Makes a GraphQL request to the GitHub API with retry logic.
+
+    Args:
+        query (str): The GraphQL query string.
+        operation_name (str): The name of the GraphQL operation.
+        variables (Dict): The variables for the GraphQL query.
+
+    Returns:
+        Dict: The JSON response from the API.
+
+    Raises:
+        requests.exceptions.RequestException: If the request fails after retries.
+    """
     url = f"{config.API_BASE_URL}/graphql"
     payload = {
-        "query": GET_TOP_USERS_QUERY,
-        "operationName": "getTopUsers",
-        "variables": {
-            "queryString": "type:user followers:>0 sort:followers-desc",
-            "number_of_users": number_of_users,
-            "usertopRepositories_count": usertopRepositories_count,
-            "cursor": cursor
-        }
+        "query": query,
+        "operationName": operation_name,
+        "variables": variables
     }
     time.sleep(config.WAIT_TIME_PER_REQUEST)
     response = requests.request("POST",
                                 url,
                                 json=payload,
                                 headers=config.HEADERS)
+
+
+    # handle rate limit
+    # Check rate limit info of response headers
+    if "X-RateLimit-Remaining" in response.headers:
+        remaining = int(response.headers["x-ratelimit-remaining"])
+        x_ratelimit_limit = int(response.headers["x-ratelimit-limit"])
+        x_ratelimit_reset = int(response.headers["x-ratelimit-reset"])
+        x_ratelimit_used = int(response.headers["x-ratelimit-used"])
+        logger.info(f"Rate limit: {remaining}/{x_ratelimit_limit} | Reset at: {x_ratelimit_reset}")
+        if x_ratelimit_used > remaining * 0.8 or remaining < 10:
+            logger.warning(
+                f"Used more than limit ({remaining}/{x_ratelimit_limit}), sleeping until reset")
+          # sleeping until reset
+            time.sleep(x_ratelimit_reset - time.time())
+        
     if response.status_code == 429:
-        logger.warning("Too many requests, sleeping for 10 seconds")
+        logger.warning("Too many requests (429), sleeping for 10 seconds")
         time.sleep(10)
-        return fetch_top_users_by_graphql(number_of_users,
-                                          usertopRepositories_count, cursor)
-    if response.status_code != 200:
-        logger.warning(f"{response.status_code}|{response.text}")
-    response.raise_for_status()
+        # Retry the same request after waiting - handled by decorator now
+        # return _make_graphql_request(query, operation_name, variables)
+        # Raise status to let the decorator handle retry
+        response.raise_for_status()
+    elif response.status_code == 403:
+        # Log forbidden errors specifically
+        logger.error(f"Forbidden (403) error accessing GitHub API: {response.text}")
+        response.raise_for_status() # Raise to trigger retry or fail
+    elif response.status_code != 200:
+        logger.warning(f"Non-200 status code: {response.status_code}|{response.text}")
+        response.raise_for_status() # Raise to trigger retry or fail
+
     return response.json()
+
+# Removed retry decorator from here
+def fetch_top_users_by_graphql(number_of_users: int = 5,
+                               usertopRepositories_count: int = 10,
+                               cursor: Optional[str] = None):
+    logger.info("Fetching top users using GraphQL...")
+    variables = {
+        "queryString": "type:user followers:>0 sort:followers-desc",
+        "number_of_users": number_of_users,
+        "usertopRepositories_count": usertopRepositories_count,
+        "cursor": cursor
+    }
+    # Call the new function which includes retry logic
+    try:
+        return _make_graphql_request(GET_TOP_USERS_QUERY, "getTopUsers", variables)
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Failed to fetch top users after retries: {e}")
+        # Decide how to handle final failure, e.g., return None or re-raise
+        # For consistency with fetch_top_repos, let's re-raise for now
+        # Or return an empty structure if the caller expects it
+        raise e # Or return {} or None depending on caller expectation
 
 
 # define the function of calling fetch_top_users_by_graphql to fetch all users and save to db
@@ -255,6 +305,7 @@ def _process_user_data(users_data_fetched, updated_at):
             "id": node.get('id'),
             "login": node.get('login'),
             "name": node.get('name'),
+            "location": node.get('location'),
             "avatarUrl": node.get('avatarUrl'),
             "url": node.get('url'),
             "followersCount": followers_data.get('totalCount'),
@@ -266,38 +317,22 @@ def _process_user_data(users_data_fetched, updated_at):
     return processed_users
 
 
-@retry_on_network_error(max_retries=3, delay=2)
+# Removed retry decorator from here
 def fetch_top_repos_by_graphql(number_of_repos: int = 10,
                                cursor: Optional[str] = None):
-    url = f"{config.API_BASE_URL}/graphql"
-    payload = {
-        "query": GET_TOP_REPOS_QUERY,
-        "operationName": "getToprepos",
-        "variables": {
-            "queryString": "stars:>0 sort:stars-desc",
-            "number_of_repos": number_of_repos,
-            "cursor": cursor
-        }
+    logger.info("Fetching top repos using GraphQL...")
+    variables = {
+        "queryString": "stars:>0 sort:stars-desc",
+        "number_of_repos": number_of_repos,
+        "cursor": cursor
     }
-    time.sleep(config.WAIT_TIME_PER_REQUEST)
-    response = requests.request("POST",
-                                url,
-                                json=payload,
-                                headers=config.HEADERS)
-    if response.status_code == 429:
-        logger.warning("Too many requests, sleeping for 10 seconds")
-        time.sleep(10)
-        return fetch_top_repos_by_graphql(number_of_repos, cursor)
-    elif response.status_code == 403:
-        logger.exception(f"Error fetching top repos: [{response.status_code}]")
-        logger.info(response.text) # Keep logging response text for context
-        return None
-    elif response.status_code != 200:
-        # Use logger.error instead of logger.exception for non-200 status codes
-        logger.error(f"Error fetching top repos: [{response.status_code}]")
-        logger.info(response.text) # Keep logging response text for context
-    response.raise_for_status()
-    return response.json()
+    try:
+        # Call the new function which includes retry logic
+        return _make_graphql_request(GET_TOP_REPOS_QUERY, "getToprepos", variables)
+    except requests.exceptions.RequestException as e:
+        # Handle potential exceptions raised by _make_graphql_request after retries
+        logger.warning(f"Failed to fetch top repos after retries: {e}")
+        return None # Return None as the original function did on 403/other errors
 
 
 def fetch_all_repos_by_graphql(max_number_of_repos: int = 200,
@@ -397,7 +432,7 @@ def _process_repo_data(repos_data_fetched: List[Dict]):
             "id": node.get('id'),
             "name": node.get('name'),
             "url": node.get('url'),
-            "stargazerCount": node.get('stargazerCount'),
+            "accumulatedStars": node.get('stargazerCount'),
             "description": node.get('description'),
             "createdAt": node.get('createdAt'),
             "languages": [lang.get("name") for lang in languages_nodes if lang.get("name")]
@@ -414,7 +449,7 @@ def update_accumulatedStars_1d():
     # 1. 获取昨天的日期
     archived_top_repos = read_archived_top_repos_1d_before_today()
     if archived_top_repos is None:
-        logger.warning("No archived top repos found.")
+        logger.warning("No archived top repos 1d before found.")
         return
     else:
         batch_update_accumulated_stars(repo_db_path, archived_top_repos,

@@ -14,6 +14,7 @@ class User(Base):
     id = Column(String, comment='GitHub Node ID')
     login = Column(String, comment='Username')
     name = Column(String, comment='Display name')
+    location = Column(String, comment='Location')
     databaseId = Column(Integer, primary_key=True, comment='GitHub Database ID')
     avatarUrl = Column(String, comment='Avatar URL')
     url = Column(String, comment='GitHub profile URL')

@@ -6,21 +6,36 @@
 This project uses GitHub Actions to periodically fetch GitHub data and automatically generate the following rankings:
 
 ## Rankings Introduction
+Ranking data is automatically fetched and calculated based on GitHub API, updated daily.
 
-- **Daily Top 200 Trending Repositories**  
-  Top 200 repositories with the most new stars in the last 24 hours.  
+### Ranking Categories
+- **Daily Top 100 Trending Repositories**  
+  Top 100 repositories with the most new stars in the last 24 hours.  
 
-- **Weekly Top 200 Trending Repositories**  
-  Top 200 repositories with the most new stars in the last 7 days.  
+- **Weekly Top 100 Trending Repositories**  
+  Top 100 repositories with the most new stars in the last 7 days.  
 
-- **Monthly Top 200 Trending Repositories**  
-  Top 200 repositories with the most new stars in the last 30 days.  
+- **Monthly Top 100 Trending Repositories**  
+  Top 100 repositories with the most new stars in the last 30 days.  
 
-- **All-Time Top 200 Most Starred Repositories**  
-  Top 200 repositories with the highest total stars in history.  
+- **All-Time Top 100 Most Starred Repositories**  
+  Top 100 repositories with the highest total stars in history.  
 
-- **Top 200 Most Followed Users**  
-  Top 200 GitHub users with the most followers.  
+- **Top 100 Most Followed Users**  
+  Top 100 GitHub users with the most followers.
+
+### TODO LIST
+- **Daily Top 100 Most Active Users**  
+  Top 100 GitHub users with the most commits in the last 24 hours.
+
+- **Weekly Top 100 Most Active Users**  
+  Top 100 GitHub users with the most commits in the last 7 days.
+
+- **Monthly Top 100 Most Active Users**  
+  Top 100 GitHub users with the most commits in the last 30 days.
+
+- **Monthly Most Popular Languages**  
+  Statistics of most used languages in new projects created in last 30 days, with repository count for each language.  
 
 ## Last Updated
 

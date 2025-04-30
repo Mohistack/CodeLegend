@@ -80,6 +80,7 @@ def save_users(db_path: str, users: List[Dict]):
             user.login = item.get('login')
             user.name = item.get('name')
             user.id = item.get('id')
+            user.location = item.get('location')
             user.avatarUrl = item.get('avatarUrl')
             user.url = item.get('url')
             user.followersCount = item.get('followersCount')
@@ -351,41 +352,56 @@ def batch_update_accumulated_stars(db_path: str, top_repos_data: Dict,
 
 
 def update_total_count(db_path: str, 
-                       repo_total_count: Optional[int] = 0, 
-                       user_total_count: Optional[int] = 0,
-                       fetched_repos_count: Optional[int] = 0,
-                       fetched_users_count: Optional[int] = 0):
+                       repo_total_count: Optional[int] = None, 
+                       user_total_count: Optional[int] = None,
+                       fetched_repos_count: Optional[int] = None,
+                       fetched_users_count: Optional[int] = None):
     """更新或创建当天的仓库和用户总数以及实际抓取数量记录。
 
     Args:
         db_path (str): GithubInfo 数据库文件的路径。
-        repo_total_count (Optional[int]): 最新的仓库总数，如果为 None 则不更新。
-        user_total_count (Optional[int]): 最新的用户总数，如果为 None 则不更新。
-        fetched_repos_count (Optional[int]): 当天实际抓取的仓库数，如果为 None 则不更新。
-        fetched_users_count (Optional[int]): 当天实际抓取的用户数，如果为 None 则不更新。
+        repo_total_count (Optional[int]): 最新的仓库总数，仅在大于 0 时更新。
+        user_total_count (Optional[int]): 最新的用户总数，仅在大于 0 时更新。
+        fetched_repos_count (Optional[int]): 当天实际抓取的仓库数，仅在大于 0 时更新。
+        fetched_users_count (Optional[int]): 当天实际抓取的用户数，仅在大于 0 时更新。
     """
     with session_scope(db_path) as session:
         dt = datetime.datetime.now().strftime("%Y%m%d")
         github_info = session.query(GithubInfo).filter_by(dt=dt).first()
+        updated = False
 
         if not github_info:
             logger.info(f"Creating new GithubInfo record for date {dt} in {db_path}")
             github_info = GithubInfo(dt=dt)
-            session.add(github_info) # Add the new instance to the session
-
-        updated = False
-        if user_total_count is not None and github_info.usersCount != user_total_count:
-            github_info.usersCount = user_total_count
-            updated = True
-        if repo_total_count is not None and github_info.reposCount != repo_total_count:
-            github_info.reposCount = repo_total_count
-            updated = True
-        if fetched_repos_count is not None and github_info.fetchedReposCount != fetched_repos_count:
-            github_info.fetchedReposCount = fetched_repos_count
-            updated = True
-        if fetched_users_count is not None and github_info.fetchedUsersCount != fetched_users_count:
-            github_info.fetchedUsersCount = fetched_users_count
-            updated = True
+            # Initialize only with positive counts
+            if user_total_count is not None and user_total_count > 0:
+                github_info.usersCount = user_total_count
+                updated = True
+            if repo_total_count is not None and repo_total_count > 0:
+                github_info.reposCount = repo_total_count
+                updated = True
+            if fetched_repos_count is not None and fetched_repos_count > 0:
+                github_info.fetchedReposCount = fetched_repos_count
+                updated = True
+            if fetched_users_count is not None and fetched_users_count > 0:
+                github_info.fetchedUsersCount = fetched_users_count
+                updated = True
+            if updated: # Only add if at least one count was positive
+                session.add(github_info)
+        else:
+            # Update existing record only with positive counts
+            if user_total_count is not None and user_total_count > 0 and github_info.usersCount != user_total_count:
+                github_info.usersCount = user_total_count
+                updated = True
+            if repo_total_count is not None and repo_total_count > 0 and github_info.reposCount != repo_total_count:
+                github_info.reposCount = repo_total_count
+                updated = True
+            if fetched_repos_count is not None and fetched_repos_count > 0 and github_info.fetchedReposCount != fetched_repos_count:
+                github_info.fetchedReposCount = fetched_repos_count
+                updated = True
+            if fetched_users_count is not None and fetched_users_count > 0 and github_info.fetchedUsersCount != fetched_users_count:
+                github_info.fetchedUsersCount = fetched_users_count
+                updated = True
 
         if updated:
              # Commit is handled by session_scope
@@ -394,7 +410,7 @@ def update_total_count(db_path: str,
                 f"FetchedRepos={github_info.fetchedReposCount}, FetchedUsers={github_info.fetchedUsersCount} in {db_path}"
             )
         else:
-            logger.info(f"Counts for {dt} remain unchanged in {db_path}")
+            logger.info(f"Counts for {dt} remain unchanged or no positive updates provided in {db_path}")
 
 
 # get the total count of repos by dt

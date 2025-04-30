@@ -48,13 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
         userTitle: (login) => `${login} - 用户详情`,
         stars: '🌟总数',
         followers: '粉丝数',
+        Location: '位置',
         language: '语言',
         description: '描述',
         daily_trending: '🔥最近一天最热项目',
         weekly_trending: '🔥🔥最近一周最热项目',
         monthly_trending: '🔥🔥🔥最近一月最热项目',
-        top_repos_list: '获的🌟最多的项目',
-        top_users_list: '追随者最多的开发者🧑‍💻',
+        top_repos_list: '🐮🔧获的🌟最多的项目',
+        original_top_repos: '🐮🔧获的🌟最多的项目',
+        top_users_list: '🐮🧑‍💻追随者最多的开发者',
         mainTitle: 'GitHub 封神榜',
         langLabel: '语言',
         githubUserCount: 'GitHub 当前注册用户总数：',
@@ -85,8 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
         daily_trending: '🔥Daily Trending',
         weekly_trending: '🔥🔥Weekly Trending',
         monthly_trending: '🔥🔥🔥Monthly Trending',
-        top_repos_list: 'Top Repos',
-        top_users_list: 'Top Coders🧑‍💻',
+        top_repos_list: '🐮🔧Top Repos',
+        original_top_repos: '🐮🔧Top Repos',
+        top_users_list: '🐮🧑‍💻Top Coders',
         mainTitle: 'GitHub Legend Leaderboard',
         langLabel: 'Language',
         githubUserCount: 'GitHub Registered Users:',
@@ -288,7 +291,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="item-details">
               <span>${GitRank.i18n('followers')}: ${item.followersCount?.toLocaleString() || 'N/A'}</span>
-            </div>
+               
+              <span>${GitRank.i18n('Location')}: ${item.location || '🌍Earth'}</span>
+              </div>
           </div>
         `;
       } else {
@@ -321,7 +326,12 @@ document.addEventListener('DOMContentLoaded', () => {
                   trendingStarsLabel = GitRank.i18n('stars_30d');
                   trendingstarsValue = item.accumulatedStars_30d?.toLocaleString() || '0';
                 }
-                return `<span>${starsLabel}: ${starsValue}</span>   <span>${trendingStarsLabel}: ${trendingstarsValue}</span>`;
+                // if trendingStarsLabel is not empty, add  trendingStars span to the HTML
+                // if trendingStarsLabel is empty, only return starsLabel and starsValue
+                if (trendingStarsLabel) {
+                  return `<span>${starsLabel}: ${starsValue}</span>   <span>${trendingStarsLabel}: ${trendingstarsValue}</span>`;
+                }
+                  return `<span>${starsLabel}: ${starsValue}</span>`;
               })()}
               ${languages ? `<span>${GitRank.i18n('language')}: ${languages}</span>` : ''}
             </div>
@@ -471,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Initial data fetch for the default active type
       const initialActiveButton = document.querySelector('.rank-nav button.active');
-      GitRank.currentRankType = initialActiveButton ? initialActiveButton.dataset.type : 'daily_trending';
+      GitRank.currentRankType = initialActiveButton ? initialActiveButton.dataset.type : 'top_users_list';
       GitRank.fetchData(GitRank.currentRankType);
     }
   };
